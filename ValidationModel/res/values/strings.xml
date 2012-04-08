@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <string name="titleString">Application Title</string>
+    <string name="app_name">ValidationModel</string>
+    <string name="submitButtonString">Submit</string>
+    <string name="cancelButtonString">Cancel</string>
+
+<string name="activityString">Activity Header (Sign in form:)</string>
+<string name="tooltipTV">Please enter login info:</string>
+    <string name="appIconDesc">Icon that describes the apps functionality</string>
+<string name="userNameHint">Username</string>
+    <string name="passwordHint">Password</string>
+</resources>

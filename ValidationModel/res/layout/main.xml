@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/applicationHeaderLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/activityIconIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/appIconDesc"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/titleHeaderTV"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/titleString"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activityTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/applicationHeaderLayout"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray" >
+
+        <TextView
+            android:id="@+id/activityTitleTV"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/activityString" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonToolbarLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dip" >
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.5"
+            android:text="@string/submitButtonString" />
+
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="0.5"
+            android:text="@string/cancelButtonString" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/buttonToolbarLayout"
+        android:layout_below="@id/activityTitleLayout" >
+
+        <RelativeLayout
+            android:id="@+id/fullContentsLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <TextView
+                android:id="@+id/tooltipTV"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/tooltipTV"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <RelativeLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/tooltipTV" >
+
+                <EditText
+                    android:id="@+id/userNameET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dip"
+                    android:hint="@string/userNameHint" >
+                </EditText>
+
+                <ImageView
+                    android:id="@+id/usernameVisualTip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/userNameET"
+                    android:layout_alignRight="@+id/userNameET"
+                    android:layout_alignTop="@+id/userNameET"
+                    android:padding="10dip"
+                    android:src="@drawable/ic_launcher" />
+
+                <EditText
+                    android:id="@+id/passwordET"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/userNameET"
+                    android:layout_margin="10dip"
+                    android:hint="@string/passwordHint" >
+                </EditText>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

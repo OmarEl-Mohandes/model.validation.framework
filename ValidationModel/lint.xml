@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="ScrollViewSize">
+        <ignore path="res/layout/main.xml" />
+    </issue>
+    <issue id="UseCompoundDrawables">
+        <ignore path="res/layout/main.xml" />
+    </issue>
+</lint>
